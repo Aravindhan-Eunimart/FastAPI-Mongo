@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "2b6b01e4-b3fb-4c67-b964-9d694e9f0a71",
+		"name": "FastAPI Mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Single Record",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"student\": {\n        \"id\": 1,\n        \"name\": \"demo\",\n        \"age\": 18,\n        \"class\": \"12\",\n        \"mother_name\": \"demo-mother\",\n        \"father_name\": \"demo-father\",\n        \"address\": \"demo-address\",\n        \"phone-number-1\": \"987654210\"\n    },\n    \"progress\": {\n        \"exam_name\": \"Formative Assessment\",\n        \"grade\": \"O+\",\n        \"physics\": 50,\n        \"chemistry\": 52,\n        \"maths\": 60,\n        \"total\": 162,\n        \"percentage\": 54\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Multiple Records",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"student\": {\n            \"id\": 2,\n            \"name\": \"demo1\",\n            \"age\": 18,\n            \"class\": \"12\",\n            \"mother_name\": \"demo-mother\",\n            \"father_name\": \"demo-father\",\n            \"address\": \"demo-address\",\n            \"phone-number-1\": \"987654210\"\n        },\n        \"progress\": {\n            \"exam_name\": \"Formative Assessment\",\n            \"grade\": \"O\",\n            \"physics\": 50,\n            \"chemistry\": 52,\n            \"maths\": 60,\n            \"total\": 162,\n            \"percentage\": 54\n        }\n    },\n    {\n        \"student\": {\n            \"id\": 3,\n            \"name\": \"demo2\",\n            \"age\": 18,\n            \"class\": \"12\",\n            \"mother_name\": \"demo-mother\",\n            \"father_name\": \"demo-father\",\n            \"address\": \"demo-address\",\n            \"phone-number-1\": \"987654210\"\n        },\n        \"progress\": {\n            \"exam_name\": \"Formative Assessment\",\n            \"grade\": \"A+\",\n            \"physics\": 50,\n            \"chemistry\": 52,\n            \"maths\": 60,\n            \"total\": 162,\n            \"percentage\": 54\n        }\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Records",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Single Record",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Multiple Records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
